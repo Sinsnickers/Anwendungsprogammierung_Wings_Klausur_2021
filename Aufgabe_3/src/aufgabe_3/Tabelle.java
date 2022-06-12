@@ -29,6 +29,7 @@ public class Tabelle {
     JPanel panel = new JPanel();
     JTable table = new JTable(tabledata, columnHeaders);
     JScrollBar scrollbar =  new JScrollBar();
+    scrollbar.add(table);
     panel.add(table);
     frame.add(panel);
     scrollbar.setVisible(true);
