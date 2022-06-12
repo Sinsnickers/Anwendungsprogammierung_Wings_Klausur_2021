@@ -6,7 +6,7 @@ package aufgabe_3;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
-import javax.swing.JScrollBar;
+import javax.swing.JScrollPane;
 import javax.swing.JTable;
 
 /**
@@ -26,14 +26,11 @@ public class Tabelle {
     Object [] columnHeaders = {"Platz", "Mannschaft", "Punkte", "Tordifferenz"};
     
     JFrame frame = new JFrame();
-    JPanel panel = new JPanel();
     JTable table = new JTable(tabledata, columnHeaders);
-    JScrollBar scrollbar =  new JScrollBar();
-    scrollbar.add(table);
-    panel.add(table);
-    frame.add(panel);
-    scrollbar.setVisible(true);
+    JScrollPane scrollpane =  new JScrollPane(table);
+    frame.add(scrollpane);
+    scrollpane.setVisible(true);
+    frame.pack();
     frame.setVisible(true);
-    panel.setVisible(true);
         
 }}
